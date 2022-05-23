@@ -1,0 +1,45 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.SwapProgressStepper {
+  padding-bottom: 0 !important;
+  font-family: $font-family-base;
+
+  @include stepper;
+
+  .SwapProgressStepper_label span {
+    font-family: $font-family-base;
+  }
+
+  .SwapProgressStepper_icon_text {
+    font-family: $font-family-base;
+  }
+
+  .SwapProgressStepper_connector {
+    left: calc(-50% + 15px);
+    right: calc(50% + 15px);
+
+    &_line {
+      border: none;
+      padding-top: 4px;
+      height: 1px;
+      background-image: linear-gradient(to right, #D8D8D8 33%, rgba(255,255,255,0) 0%);
+      background-position: bottom;
+      background-size: 25px 1px;
+      background-repeat: repeat-x;
+    }
+
+    &_label {
+      font-family: $font-family-base;
+    }
+
+    &_completed, &_active {
+      .SwapProgressStepper_connector_line {
+        height: 3px;
+        border: none;
+        background: $color-primary-2;
+      }
+    }
+
+  }
+}

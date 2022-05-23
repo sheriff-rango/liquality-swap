@@ -1,0 +1,47 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.WalletConnected {
+  text-align: center;
+  font-family: $font-family-base;
+
+  h2 {
+    padding: 10px;
+    margin-top: 10px;
+    line-height: 2rem;
+    color: $color-text-1;
+  }
+
+  &_divider {
+    border-bottom: 2px solid $color-bg-secondary;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  &_subtitle {
+    font-size: $h3-font-size;
+    color: $color-text-2;
+  }
+
+  &_currencyBar {
+    @include currency-bar;
+    margin-top: -7px;
+  }
+
+  &_wallet {
+    border-radius: 10px;
+    padding: 40px 10px;
+    margin: 10px 5px 20px;
+
+    h5 {
+      padding-top: 7px;
+      color: #333;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    p {
+      font-family: $font-family-base;
+      color: $color-text-2;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../scss/variables.scss';
+
+.WalletPanel {
+  background: $color-bg-secondary;
+  padding: 40px 0;
+  height: 240px;
+
+  &_left {
+    margin-left: 125px;
+  }
+
+  &_right {
+    margin-right: 125px;
+
+    .WalletDisplay {
+      float: right;
+    }
+  }
+
+  &_walletImg {
+    width: 40px;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../scss/variables.scss';
+
+.CurrencyInputs {
+  position: relative;
+  $panel-spacing: 40px;
+  width: 100%;
+
+  &_left {
+    margin-left: $panel-spacing;
+    margin-top: 20px;
+  }
+
+  &_right {
+    margin-right: $panel-spacing;
+    padding-right: 40px;
+    margin-top: 20px;
+    .CurrencyInput {
+      float: right;
+    }
+  }
+
+  &_switch {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: relative;
+    top: 56px;
+    z-index: $layer-top;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .Rate {
+    position: absolute;
+    right: 325px;
+    top: 95px;
+    z-index: $layer-top;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../scss/variables.scss';
+
+.SwapRefund {
+  text-align: center;
+
+  &_confirmation {
+    font-weight: 700;
+    position: relative;
+    top:10px;
+  }
+
+  &_terms {
+    font-size: 40px;
+  }
+
+  &_pairDiv {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    p {
+      justify-content: flex-start;
+      width: 50%;
+      
+    }
+    span {
+      justify-content: flex-end;
+      width: 50%;
+      text-align: right;
+    }
+  }
+
+  &_expiredFrame {
+    text-align: center;
+    width: 100%;
+    background-color: #F7F8FA;
+    color: #A4AAB6;
+    border-radius: 0px 0px 22px 22px;
+    padding: 50px;
+
+    &_content {
+      margin-left: 30%;
+      width: 40%;
+      text-align: left;
+
+      &_title {
+        text-align: center;
+        color: #494949;
+      }
+
+      &_value {
+        color: #5F5F5F;
+      }
+    }
+   
+  }
+
+
+}

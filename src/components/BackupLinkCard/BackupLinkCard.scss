@@ -1,0 +1,47 @@
+@import '../../scss/variables.scss';
+
+.BackupLinkCard {
+  text-align: center;
+  height: 700px;
+  h3 {
+    font-weight: bold;
+    color: $color-text-1;
+    padding-top: 35px;
+    text-align: center;
+    
+    img {
+      width: 32px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &_whiteBar {
+    margin: 0 auto;
+    margin-top: -90px;
+    margin-bottom: 50px; 
+    background-color: white;
+    height: 20px;
+    width: 300px;
+    border-radius: 25px;
+  }
+
+  &_whiteHover {
+    &:hover {
+      background: $color-bg-primary;
+      border: 1px solid $color-primary-1;
+      color: $color-primary-1;
+    }
+  }
+
+  &_description {
+    width: 365px;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 10px;
+  }
+
+  &_icon {
+    margin-top: 30px;
+    width: 40px;
+  }
+}

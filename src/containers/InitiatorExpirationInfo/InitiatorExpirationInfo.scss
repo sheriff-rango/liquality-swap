@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+.InitiatorExpirationInfo {
+  padding-top: 20px;
+  p {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    color: $color-text-2;
+  }
+  h5 {
+    color: $color-text-1;
+    font-weight: bold;
+  }
+
+  &_icon {
+    height: 25px;
+    margin-right: 10px;
+  }
+}

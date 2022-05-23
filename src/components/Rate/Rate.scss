@@ -1,0 +1,121 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.Rate {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 250px;
+
+  &_circle {
+    margin: 0 auto;
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    padding: 30px 10px;
+    background: $color-bg-primary;
+  }
+
+  &.error &_circle {
+    border: 1px solid $danger;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance:textfield;
+  }
+
+  .Rate_stable {
+    font-weight: bold;
+    color: $color-text-1;
+  }
+
+  &.strong {
+    .Rate_equal, .Rate_amount {
+      font-weight: bold;
+      color: $color-text-1;
+    }
+  }
+
+  &_heading {
+    display: block;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  &_input {
+    @include blank-input;
+    width: 55px;
+    height: 20px;
+    text-align: center;
+    font-size: $h6-font-size;
+    font-weight: 500;
+    border-bottom: 1px solid #c7c7c7;
+  }
+
+  &_equal {
+    margin-bottom: 0px;
+  }
+
+  &_stable {
+    margin-bottom: 0px;
+  }
+
+  &_errorMessage {
+    @include error-message;
+  }
+
+  &_timer {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    &_progress {
+      fill: none;
+      stroke: $color-primary-2;
+      stroke-width: 2px;
+      transition: stroke-dashoffset 0.7s;
+      stroke-dasharray: 628.319;
+      stroke-dashoffset: -1256.64;
+    }
+
+    &_pointer {
+      transform: rotate(0deg);
+      animation-iteration-count: 1;
+      &_c {
+        fill: #FFF;
+        stroke: $color-primary-2;
+        stroke-width: 2px;
+      }
+    }
+
+    @keyframes countdown {
+      from {
+        stroke-dashoffset: -1256.64;
+      }
+      to {
+        stroke-dashoffset: -628.319;
+      }
+    }
+
+    @keyframes pointer {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

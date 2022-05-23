@@ -1,0 +1,53 @@
+@import '../../scss/variables.scss';
+
+.Button {
+  font-weight: 600;
+  position: relative;
+
+  &_whiteButton {
+    &:hover{
+    background: white;
+    border: 1px solid $color-primary-1;
+    color: $color-primary-1;
+    }
+  }
+
+  &_wide {
+      width: 350px;
+  }
+
+  &_small {
+    padding: 6px 10px;
+    font-size: $font-size-sm;
+    font-weight: 600;
+  }
+
+  &_icon {
+    position: absolute;
+    width: 54px;
+    left: 0;
+    border-right: 1px solid #C49FEF;
+    text-align: center;
+    img {
+      max-height: 20px;
+    }
+  }
+
+  &_spinner {
+    margin: -12px 10px -10px 0;
+    width: 26px;
+  }
+}
+
+.btn-primary {
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  border: 1px solid $primary;
+  color: $primary;
+  .Button_icon {
+    border-color: $primary;
+  }
+}

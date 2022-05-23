@@ -1,0 +1,11 @@
+@import '../../scss/variables.scss';
+
+.CounterPartyWallets {
+  text-align: left;
+
+  &_heading {
+    padding-left: 50px;
+    font-weight: 700;
+    color: $body-color;
+  }
+}
